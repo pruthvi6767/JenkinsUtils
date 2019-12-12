@@ -16,7 +16,7 @@ Logger logger = Logger.getLogger("")
 def env = System.getenv()
 Credentials credentials = null
 globalCredentialsStore = SystemCredentialsProvider.getInstance().getStore()
-credentials = new StringCredentialsImpl(CredentialsScope.GLOBAL,"mysql_secret_git_token","Github Token for svcetsjirarobot",new Secret(env['SERVICE_ETS_JIRA_ROBOT_TOKEN']))
+credentials = new StringCredentialsImpl(CredentialsScope.GLOBAL,"secret_git_token","Github Token for robot",new Secret(env['ROBOT_TOKEN']))
 globalCredentialsStore.addCredentials(Domain.global(), credentials)
 logger.info("added .... MySQL Token..")
 
