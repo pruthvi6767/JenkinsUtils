@@ -18,7 +18,7 @@ Credentials credentials = null
 globalCredentialsStore = SystemCredentialsProvider.getInstance().getStore()
 credentials = new StringCredentialsImpl(CredentialsScope.GLOBAL,"secret_git_token","Github Token for robot",new Secret(env['ROBOT_TOKEN']))
 globalCredentialsStore.addCredentials(Domain.global(), credentials)
-logger.info("added .... MySQL Token..")
+logger.info("added .... Token..")
 
 
 
